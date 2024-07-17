@@ -32,7 +32,9 @@
     "build:taghelper": "yarn workspace @gcsim/taghelper build",
     "deploy:workers": "yarn workspace @gcsim/workers deploy",
     "start:workers": "yarn workspace @gcsim/workers start",
-    "storybook": "yarn workspace @gcsim/storybook storybook"
+    "storybook": "yarn workspace @gcsim/storybook storybook",
+    "start:wfp": "concurrently \"yarn workspace @gcsim/wfpsim watch:web\" \"yarn:start:wfp-web\"",
+    "start:wfp-web": "yarn workspace @gcsim/wfpsim dev"
   },
   "devDependencies": {
     "@types/eslint": "^8",
